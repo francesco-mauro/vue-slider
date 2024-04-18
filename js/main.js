@@ -4,7 +4,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
- 
+      activeIndex: 0,
       images: [
         {
           image: "img/01.webp",
@@ -35,6 +35,10 @@ createApp({
     };
   },
   methods: {
+    goToNext: function() {
+      // console.log("provaprova");
+
+    },
 
   }
 }).mount('#app')

@@ -40,18 +40,18 @@
                 <!-- immagini -->
                 <!-- immagine 1 -->
                 <div class="my-carousel-item active" carousel-item="1">
-                  <img class="img-fluid" src="./img/01.webp" alt="Marvel's Spiderman Miles Morale picture" />
+                  <img class="img-fluid" :src="images[activeIndex].image" alt="Marvel's Spiderman Miles Morale picture" />
                   <div class="item-description px-3">
-                    <h2>{{images[0].title}}</h2>
+                    <h2>{{images[activeIndex].title}}</h2>
                     <p>
-                      {{images[0].text}}
+                      {{images[activeIndex].text}}
                     </p>
                   </div>
                 </div>
                 <!-- /immagine 1 -->
 
                 <!-- immagine 2 -->
-                <div class="my-carousel-item" carousel-item="1">
+                <!-- <div class="my-carousel-item" carousel-item="1">
                   <img class="img-fluid" src="./img/02.webp" alt="Ratchet & Clank: Rift Apart" />
                   <div class="item-description px-3">
                     <h2>Ratchet & Clank: Rift Apart</h2>
@@ -60,7 +60,7 @@
                       on an evil emperor from another reality.
                     </p>
                   </div>
-                </div>
+                </div> -->
                 <!-- /immagine 2 -->
 
                 <!-- etc .... -->
@@ -71,7 +71,7 @@
                   <span class="my-prev-hook"></span>
                 </div>
                 <!-- next -->
-                <div class="my-next position-absolute">
+                <div class="my-next position-absolute" @click="goToNext">
                   <span class="my-next-hook"></span>
                 </div>
                 <!-- immagini interne -->
