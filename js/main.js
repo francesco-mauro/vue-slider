@@ -35,10 +35,13 @@ createApp({
     };
   },
   methods: {
-    goToNext: function() {
+    goToNext: function () {
       // console.log("provaprova");
-
-    },
-
+      if (this.activeIndex === this.images.length - 1) {
+        this.activeIndex = 0
+      } else {
+        this.activeIndex++;
+      }
+    }
   }
-}).mount('#app')
+}).mount('#app');
