@@ -49,6 +49,9 @@ createApp({
       } else {
         this.activeIndex--;
       }
+    },
+    setActiveIndex: function (index) {
+      this.activeIndex = index;
     }
   }
 }).mount('#app');

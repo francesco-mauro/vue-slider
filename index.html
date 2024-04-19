@@ -40,7 +40,8 @@
                 <!-- immagini -->
                 <!-- immagine 1 -->
                 <div class="my-carousel-item active" carousel-item="1">
-                  <img class="img-fluid" :src="images[activeIndex].image" alt="Marvel's Spiderman Miles Morale picture" />
+                  <img class="img-fluid" :src="images[activeIndex].image"
+                    alt="Marvel's Spiderman Miles Morale picture" />
                   <div class="item-description px-3">
                     <h2>{{images[activeIndex].title}}</h2>
                     <p>
@@ -75,11 +76,14 @@
                   <span class="my-next-hook"></span>
                 </div>
                 <!-- immagini interne -->
-                <img class="img-fluid my-thumbnail active" src="./img/01.webp"
-                  alt="Thumbnail of Marvel's Spiderman Miles Morale picture" />
-                <img class="img-fluid my-thumbnail" src="./img/02.webp"
-                  alt="Thumbnail of Ratchet & Clank: Rift Apart picture" />
-                <!-- etc ... -->
+                  <img 
+                  v-for="(img, index) in images" :key="index" 
+                  :src="img.image" 
+                  :alt="img.text"
+                  class="img-fluid my-thumbnail" 
+                  :class="{ active: activeIndex === index }" 
+                  @click="setActiveIndex(index)"/>
+            
               </div>
             </div>
           </div>
